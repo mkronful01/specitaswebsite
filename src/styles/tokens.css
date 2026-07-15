@@ -1,0 +1,35 @@
+:root {
+  --color-teal: #00b7c7;
+  --color-teal-deep: #0a3a4a;
+  --color-plum: #6b2d4a;
+  --color-plum-deep: #2a121c;
+  --color-gold: #c4a035;
+  --color-gold-deep: #4a3f1a;
+  --color-charcoal: #3a3a3a;
+  --color-ink: #0b0d10;
+  --color-slate: #6688b2;
+  --color-slate-soft: #8aa3c4;
+  --color-paper: #f5f7fa;
+  --color-mist: #e8eef5;
+  --color-white: #ffffff;
+
+  --font-display: "Outfit", "Segoe UI", sans-serif;
+  --font-body: "DM Sans", "Segoe UI", sans-serif;
+
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1.25rem;
+  --space-lg: 2rem;
+  --space-xl: 3.5rem;
+  --space-2xl: 5.5rem;
+  --space-3xl: 7.5rem;
+
+  --max-width: 1120px;
+  --header-height: 4.5rem;
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --shadow-soft: 0 18px 40px rgba(11, 13, 16, 0.12);
+
+  --tracking-brand: 0.28em;
+  --tracking-label: 0.18em;
+}

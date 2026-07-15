@@ -1,0 +1,26 @@
+.intro {
+  padding: calc(var(--header-height) + var(--space-xl)) var(--space-lg)
+    var(--space-lg);
+  background:
+    linear-gradient(180deg, rgba(232, 238, 245, 0.9), transparent),
+    var(--color-paper);
+  border-bottom: 1px solid rgba(11, 13, 16, 0.06);
+}
+
+.inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: -0.02em;
+  max-width: 16ch;
+  margin-bottom: var(--space-md);
+}
+
+.lead {
+  max-width: 54ch;
+  color: rgba(11, 13, 16, 0.72);
+  font-size: 1.05rem;
+}

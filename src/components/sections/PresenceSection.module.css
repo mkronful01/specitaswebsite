@@ -1,0 +1,40 @@
+.header {
+  margin-bottom: var(--space-xl);
+}
+
+.regions {
+  display: grid;
+  gap: 1px;
+  background: rgba(11, 13, 16, 0.08);
+  border: 1px solid rgba(11, 13, 16, 0.08);
+}
+
+.region {
+  background: var(--color-paper);
+  padding: var(--space-lg);
+  display: grid;
+  gap: 0.35rem;
+  transition: background 0.3s var(--ease-out);
+}
+
+.region:hover {
+  background: var(--color-mist);
+}
+
+.name {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+}
+
+.detail {
+  color: var(--color-slate);
+  font-size: 0.92rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+@media (min-width: 800px) {
+  .regions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
