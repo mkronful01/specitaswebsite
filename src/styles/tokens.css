@@ -1,17 +1,21 @@
 :root {
-  --color-teal: #00b7c7;
-  --color-teal-deep: #0a3a4a;
-  --color-plum: #6b2d4a;
-  --color-plum-deep: #2a121c;
-  --color-gold: #c4a035;
-  --color-gold-deep: #4a3f1a;
+  --color-teal: #2f7f9a;
+  --color-teal-soft: #5aa0b8;
+  --color-teal-deep: #1a4f63;
+  --color-plum: #6b3d7a;
+  --color-plum-soft: #8b5a96;
+  --color-plum-deep: #3d2048;
+  --color-gold: #c4a04a;
+  --color-gold-soft: #d4b86a;
+  --color-gold-deep: #8a6e28;
   --color-charcoal: #3a3a3a;
-  --color-ink: #0b0d10;
-  --color-slate: #6688b2;
-  --color-slate-soft: #8aa3c4;
-  --color-paper: #f5f7fa;
-  --color-mist: #e8eef5;
+  --color-ink: #1c1f24;
+  --color-slate: #6b7c8f;
+  --color-slate-soft: #8aa0b4;
+  --color-paper: #f7f8fa;
+  --color-mist: #eef1f5;
   --color-white: #ffffff;
+  --color-line: rgba(28, 31, 36, 0.08);
 
   --font-display: "Outfit", "Segoe UI", sans-serif;
   --font-body: "DM Sans", "Segoe UI", sans-serif;
@@ -24,12 +28,15 @@
   --space-2xl: 5.5rem;
   --space-3xl: 7.5rem;
 
-  --max-width: 1120px;
-  --header-height: 4.5rem;
+  --max-width: 1180px;
+  --header-height: 4.25rem;
 
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
-  --shadow-soft: 0 18px 40px rgba(11, 13, 16, 0.12);
+  --shadow-soft: 0 18px 48px rgba(28, 31, 36, 0.08);
+  --shadow-card: 0 12px 40px rgba(28, 31, 36, 0.06);
 
-  --tracking-brand: 0.28em;
-  --tracking-label: 0.18em;
+  --tracking-brand: 0.22em;
+  --tracking-label: 0.16em;
+
+  --page-bg-image: url("/assets/backgrounds/page-background.png");
 }

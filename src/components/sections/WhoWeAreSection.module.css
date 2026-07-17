@@ -3,6 +3,10 @@
   gap: var(--space-xl);
 }
 
+.header {
+  margin-bottom: var(--space-lg);
+}
+
 .copy p + p {
   margin-top: var(--space-md);
 }

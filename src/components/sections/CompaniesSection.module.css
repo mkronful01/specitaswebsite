@@ -1,101 +1,199 @@
+.section {
+  padding-top: var(--space-xl);
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 2.75rem;
+}
+
+.title {
+  font-size: clamp(1.65rem, 3vw, 2.35rem);
+  max-width: 22ch;
+  margin: 0 auto 1.15rem;
+  color: var(--color-ink);
+}
+
+.rule {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  position: relative;
+  padding: 0 0.35rem;
+}
+
+.rule::before {
+  content: "";
+  position: absolute;
+  left: -2.5rem;
+  right: -2.5rem;
+  top: 50%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(28, 31, 36, 0.12),
+    transparent
+  );
+}
+
+.dotTeal,
+.dotPlum,
+.dotGold {
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 999px;
+  position: relative;
+  z-index: 1;
+}
+
+.dotTeal {
+  background: var(--color-teal);
+}
+
+.dotPlum {
+  background: var(--color-plum);
+}
+
+.dotGold {
+  background: var(--color-gold);
+}
+
 .grid {
   display: grid;
-  gap: var(--space-2xl);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  max-width: 920px;
+  margin: 0 auto;
 }
 
 .company {
-  display: grid;
-  gap: var(--space-lg);
-  padding-bottom: var(--space-2xl);
-  border-bottom: 1px solid rgba(11, 13, 16, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+  padding: 1.5rem 1.35rem 1.6rem;
+  border-radius: 4px;
+  background: linear-gradient(
+    165deg,
+    color-mix(in srgb, var(--accent) 8%, white) 0%,
+    rgba(255, 255, 255, 0.55) 55%,
+    transparent 100%
+  );
+  border: 1px solid color-mix(in srgb, var(--accent) 14%, transparent);
+  transition: transform 0.25s var(--ease-out), box-shadow 0.25s var(--ease-out);
 }
 
-.company:last-child {
-  border-bottom: none;
-  padding-bottom: 0;
+.company:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card);
+}
+
+.teal {
+  --accent: var(--color-teal);
+}
+
+.plum {
+  --accent: var(--color-plum);
+}
+
+.gold {
+  --accent: var(--color-gold);
 }
 
 .logoPanel {
   display: flex;
   align-items: center;
-  justify-content: center;
-  min-height: 220px;
-  padding: var(--space-md) 0;
-  background: transparent;
-  overflow: hidden;
+  justify-content: flex-start;
+  min-height: 4.5rem;
 }
 
 .logo {
-  width: 100%;
-  max-width: 560px;
+  max-width: 190px;
+  max-height: 72px;
+  width: auto;
   height: auto;
-  max-height: none;
   object-fit: contain;
 }
 
 .copy {
-  display: grid;
-  gap: 0.85rem;
-  align-content: start;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  flex: 1;
+}
+
+.name {
+  font-size: 1.15rem;
+  color: var(--color-ink);
+  margin-bottom: 0.15rem;
+}
+
+.entities {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 0.45rem;
+}
+
+.entityRegion {
+  font-weight: 500;
+  color: color-mix(in srgb, var(--accent) 75%, var(--color-ink));
 }
 
 .focus {
+  color: var(--accent);
+  font-size: 0.92rem;
+  font-weight: 550;
+}
+
+.region {
   font-family: var(--font-display);
-  font-size: 0.8rem;
-  letter-spacing: var(--tracking-label);
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--color-slate);
-}
-
-.legalList {
-  display: grid;
-  gap: 0.35rem;
-}
-
-.legalName {
-  font-family: var(--font-display);
-  font-size: 1.05rem;
-  color: rgba(11, 13, 16, 0.88);
+  color: color-mix(in srgb, var(--accent) 70%, white);
+  margin-bottom: 0.55rem;
 }
 
 .description {
-  color: rgba(11, 13, 16, 0.7);
-  max-width: 54ch;
+  color: rgba(28, 31, 36, 0.62);
+  font-size: 0.92rem;
+  line-height: 1.55;
+  margin-bottom: 0.85rem;
+  flex: 1;
 }
 
 .link {
-  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-top: auto;
   font-family: var(--font-display);
-  font-size: 0.9rem;
-  letter-spacing: 0.04em;
-  border-bottom: 1px solid rgba(11, 13, 16, 0.25);
-  padding-bottom: 0.15rem;
+  font-size: 0.88rem;
+  font-weight: 550;
+  color: var(--color-ink);
 }
 
-.link:hover {
-  border-bottom-color: var(--color-ink);
+.linkIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.55rem;
+  height: 1.55rem;
+  border-radius: 999px;
+  background: var(--color-ink);
+  color: var(--color-white);
+  font-size: 0.75rem;
 }
 
-.teal .logoPanel {
-  box-shadow: inset 0 -3px 0 var(--color-teal);
+.linkMuted {
+  margin-top: auto;
+  font-size: 0.85rem;
+  color: rgba(28, 31, 36, 0.45);
 }
 
-.plum .logoPanel {
-  box-shadow: inset 0 -3px 0 #7a5299;
-}
-
-@media (min-width: 900px) {
-  .company {
-    grid-template-columns: 1.15fr 0.85fr;
-    align-items: center;
-    gap: var(--space-xl);
-  }
-
-  .logoPanel {
-    min-height: 340px;
-  }
-
-  .logo {
-    max-width: 640px;
+@media (max-width: 960px) {
+  .grid {
+    grid-template-columns: 1fr;
   }
 }

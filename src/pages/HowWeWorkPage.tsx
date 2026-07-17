@@ -1,18 +1,18 @@
-import { PageIntro } from "../components/layout/PageIntro";
 import { PageShell } from "../components/layout/PageShell";
 import { HowWeWorkSection } from "../components/sections/HowWeWorkSection";
-import { SiteContent } from "../content/siteContent";
+import { Logger } from "../logging/Logger";
+
+export class HowWeWorkPageController {
+  public static logMount(): void {
+    Logger.info("logMount", "How We Work page mounted with redesigned layout");
+  }
+}
 
 export function HowWeWorkPage() {
-  const content = SiteContent.howWeWork;
+  HowWeWorkPageController.logMount();
 
   return (
     <PageShell>
-      <PageIntro
-        label={content.label}
-        title={content.title}
-        lead={content.lead}
-      />
       <HowWeWorkSection />
     </PageShell>
   );

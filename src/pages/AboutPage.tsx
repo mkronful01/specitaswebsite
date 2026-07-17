@@ -1,23 +1,27 @@
-import { PageIntro } from "../components/layout/PageIntro";
 import { PageShell } from "../components/layout/PageShell";
+import { AboutHeroSection } from "../components/sections/AboutHeroSection";
+import { CompaniesSection } from "../components/sections/CompaniesSection";
 import { PresenceSection } from "../components/sections/PresenceSection";
-import { ValuesSection } from "../components/sections/ValuesSection";
 import { VisionMissionSection } from "../components/sections/VisionMissionSection";
 import { WhoWeAreSection } from "../components/sections/WhoWeAreSection";
 import { WhySection } from "../components/sections/WhySection";
-import { SiteContent } from "../content/siteContent";
+import { Logger } from "../logging/Logger";
+
+export class AboutPageController {
+  public static logMount(): void {
+    Logger.info("logMount", "About us page mounted with reference layout");
+  }
+}
 
 export function AboutPage() {
+  AboutPageController.logMount();
+
   return (
     <PageShell>
-      <PageIntro
-        label={SiteContent.whoWeAre.label}
-        title={SiteContent.whoWeAre.title}
-        lead={SiteContent.whoWeAre.paragraphs[0]}
-      />
+      <AboutHeroSection />
+      <CompaniesSection />
       <WhoWeAreSection />
       <VisionMissionSection />
-      <ValuesSection />
       <WhySection />
       <PresenceSection />
     </PageShell>

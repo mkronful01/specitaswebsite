@@ -3,14 +3,21 @@ export type NavItem = {
   label: string;
 };
 
+export type CompanyEntity = {
+  name: string;
+  region: string;
+};
+
 export type CompanyProfile = {
   id: string;
   brandName: string;
   legalNames: string[];
+  entities?: CompanyEntity[];
   focus: string;
+  region: string;
   description: string;
   logoSrc: string;
-  accent: "teal" | "plum";
+  accent: "teal" | "plum" | "gold";
   logoTone: "light" | "dark";
   href?: string;
 };
@@ -28,6 +35,29 @@ export type WhyItem = {
   description: string;
 };
 
+export type HowWeWorkBenefit = {
+  id: string;
+  title: string;
+  description: string;
+  accent: "teal" | "plum" | "indigo" | "gold";
+};
+
+export type ContactChannel = {
+  id: string;
+  label: string;
+  value: string;
+  href?: string;
+  accent: "teal" | "plum" | "gold" | "charcoal";
+};
+
+export type OfficeLocation = {
+  id: string;
+  name: string;
+  addressLines: string[];
+  telephoneDisplay: string;
+  telephoneHref: string;
+};
+
 export class SiteContent {
   public static readonly brandName = "Specitas Group";
 
@@ -36,16 +66,58 @@ export class SiteContent {
 
   public static readonly contactEmail = "contact@specitas.com";
 
+  public static readonly contactPhone = "+971 (7) 233 7367";
+
+  public static readonly websiteUrl = "https://www.specitas.com";
+
+  public static readonly websiteDisplay = "www.specitas.com";
+
+  public static readonly presenceLabel = "UAE · Lebanon · Middle East";
+
+  public static readonly offices: OfficeLocation[] = [
+    {
+      id: "uae",
+      name: "UAE Office",
+      addressLines: [
+        "Julphar Office Tower, Office 4203",
+        "Al Hisn Road",
+        "Ras Al Khaimah, UAE",
+      ],
+      telephoneDisplay: "+971 (7) 233 7367",
+      telephoneHref: "tel:+97172337367",
+    },
+    {
+      id: "beirut",
+      name: "Beirut Office",
+      addressLines: [
+        "Abu Diab Building, Level 2",
+        "Old Saida Road, Seaside",
+        "Khalde, Lebanon",
+      ],
+      telephoneDisplay: "+961 (5) 806 331",
+      telephoneHref: "tel:+9615806331",
+    },
+  ];
+
   public static readonly logoMarkSrc = "/assets/brand/specitas-mark.png";
 
   public static readonly logoFullSrc = "/assets/brand/specitas-group-logo.png";
+
+  public static readonly logoTexturedSrc =
+    "/assets/brand/specitas-mark-textured.png";
+
+  public static readonly logoHeroMarkSrc =
+    "/assets/brand/specitas-hero-mark-clear.png";
+
+  public static readonly pageBackgroundSrc =
+    "/assets/backgrounds/page-background.png";
 
   public static readonly homeVideoSrc =
     "/assets/video/company-of-the-year-2026.mp4";
 
   public static readonly navItems: NavItem[] = [
     { path: "/", label: "Home" },
-    { path: "/about", label: "About" },
+    { path: "/about", label: "About us" },
     { path: "/companies", label: "Companies" },
     { path: "/how-we-work", label: "How We Work" },
     { path: "/contact", label: "Contact" },
@@ -58,6 +130,42 @@ export class SiteContent {
     primaryCta: { label: "Explore the Group", path: "/companies" },
     secondaryCta: { label: "Get in Touch", path: "/contact" },
   };
+
+  public static readonly aboutHero = {
+    eyebrow: "A New Chapter Begins",
+    headlinePrimary: "Specialized Expertise.",
+    headlineAccent: "Shared Vision.",
+    support:
+      "Specitas Group unites specialist companies across technical consultancy and business advisory — delivering coordinated expertise with independent excellence.",
+    primaryCta: { label: "Discover Our Group", path: "/companies" },
+  };
+
+  public static readonly homeValues: ValueItem[] = [
+    {
+      id: "precision",
+      title: "Precision",
+      description: "We focus on the details that build the foundation.",
+      accent: "teal",
+    },
+    {
+      id: "integrity",
+      title: "Integrity",
+      description: "We operate with honesty, transparency and trust.",
+      accent: "plum",
+    },
+    {
+      id: "innovation",
+      title: "Innovation",
+      description: "We embrace new ideas to create better solutions.",
+      accent: "gold",
+    },
+    {
+      id: "excellence",
+      title: "Excellence",
+      description: "We deliver quality that makes a lasting impact.",
+      accent: "charcoal",
+    },
+  ];
 
   public static readonly whoWeAre = {
     label: "Who We Are",
@@ -125,17 +233,27 @@ export class SiteContent {
     },
   ];
 
+  public static readonly companiesSection = {
+    label: "Our Group Companies",
+    title: "Two Companies. One Consortium. Shared Excellence.",
+  };
+
   public static readonly companies: CompanyProfile[] = [
     {
       id: "cb-group",
-      brandName: "C&B Consult",
+      brandName: "C&B Consultant",
       legalNames: [
         "C&B Consultant LLC OPC",
         "Construction & Builders S.A.R.L.",
       ],
+      entities: [
+        { name: "C&B Consultant", region: "UAE" },
+        { name: "Construction & Builders", region: "Lebanon" },
+      ],
       focus: "Specification Consultancy & Technical Support",
+      region: "UAE · Lebanon",
       description:
-        "Providing architectural, interior, landscape, and engineering specification consultancy, specification management, compliance reviews, material advisory, technical documentation, technical reviews, compliance assessments, and engineering expertise for complex construction projects.",
+        "Architectural, interior, landscape, and engineering specification consultancy, specification management, compliance reviews, material advisory, technical documentation, and lead technical support for complex construction projects.",
       logoSrc: "/assets/brand/cb-consult-official.png",
       accent: "teal",
       logoTone: "light",
@@ -146,8 +264,9 @@ export class SiteContent {
       brandName: "Business & Beyond",
       legalNames: ["Business & Beyond for Consultancy and Studies LLC"],
       focus: "Business Consultancy Services",
+      region: "UAE",
       description:
-        "Providing strategic consulting, business development, operational advisory, organizational improvement, and corporate support services that help organizations grow and operate more effectively.",
+        "Strategic consulting, business development, operational advisory, organizational improvement, and corporate support services that help organizations grow and operate more effectively.",
       logoSrc: "/assets/brand/business-beyond-official.png",
       accent: "plum",
       logoTone: "light",
@@ -157,7 +276,8 @@ export class SiteContent {
 
   public static readonly howWeWork = {
     label: "How We Work",
-    title: "Two companies. One coordinated approach.",
+    titleBefore: "Two companies. One coordinated ",
+    titleAccent: "approach.",
     lead:
       "Specitas Group brings technical consultancy and business advisory together under one coordinated delivery model — while each company keeps its legal identity and specialist focus.",
     paragraphs: [
@@ -167,7 +287,7 @@ export class SiteContent {
     pillars: [
       {
         id: "technical",
-        brand: "C&B Consult",
+        brand: "C&B Consultant",
         title: "Technical consultancy",
         text: "Specification consultancy and technical support for construction projects.",
         logoSrc: "/assets/brand/cb-consult-official.png",
@@ -183,12 +303,37 @@ export class SiteContent {
       },
     ],
     benefits: [
-      "One coordinated team",
-      "Specialist expertise in every discipline",
-      "Clear accountability",
-      "Efficient communication",
-      "High-quality deliverables",
-    ],
+      {
+        id: "team",
+        title: "One coordinated team",
+        description: "Aligned professionals working together toward one goal.",
+        accent: "teal",
+      },
+      {
+        id: "expertise",
+        title: "Specialist expertise in every discipline",
+        description: "Deep knowledge. Proven experience. Measurable impact.",
+        accent: "plum",
+      },
+      {
+        id: "accountability",
+        title: "Clear accountability",
+        description: "Defined roles, transparent processes, responsible delivery.",
+        accent: "teal",
+      },
+      {
+        id: "communication",
+        title: "Efficient communication",
+        description: "Streamlined channels. Smarter collaboration.",
+        accent: "indigo",
+      },
+      {
+        id: "quality",
+        title: "High-quality deliverables",
+        description: "Excellence in every detail. Value in every outcome.",
+        accent: "gold",
+      },
+    ] as HowWeWorkBenefit[],
   };
 
   public static readonly whyItems: WhyItem[] = [
@@ -232,6 +377,64 @@ export class SiteContent {
       { name: "United Arab Emirates", detail: "Operational presence" },
       { name: "Lebanon", detail: "Operational presence" },
     ],
+  };
+
+  public static readonly contact = {
+    label: "Contact",
+    titleBefore: "Let's Build Better ",
+    titleAccent: "Together.",
+    lead:
+      "Whether you require specialist specification consultancy, technical support, or business advisory services, Specitas Group brings together the expertise needed to help your projects succeed.",
+    commitmentPoints: [
+      {
+        id: "decisions",
+        title: "Informed decisions",
+        description: "Specialist knowledge that reduces risk and strengthens outcomes.",
+        accent: "teal" as const,
+      },
+      {
+        id: "partnerships",
+        title: "Trusted partnerships",
+        description: "Long-term relationships built on transparency and accountability.",
+        accent: "plum" as const,
+      },
+      {
+        id: "standards",
+        title: "Professional standards",
+        description: "Technically sound, commercially practical consultancy.",
+        accent: "gold" as const,
+      },
+    ],
+    channels: [
+      {
+        id: "phone-uae",
+        label: "UAE Office.",
+        value: "+971 (7) 233 7367",
+        href: "tel:+97172337367",
+        accent: "teal",
+      },
+      {
+        id: "phone-beirut",
+        label: "Beirut Office.",
+        value: "+961 (5) 806 331",
+        href: "tel:+9615806331",
+        accent: "charcoal",
+      },
+      {
+        id: "email",
+        label: "Email us.",
+        value: "contact@specitas.com",
+        href: "mailto:contact@specitas.com",
+        accent: "plum",
+      },
+      {
+        id: "web",
+        label: "Visit our website.",
+        value: "www.specitas.com",
+        href: "https://www.specitas.com",
+        accent: "gold",
+      },
+    ] as ContactChannel[],
   };
 
   public static readonly commitment = {

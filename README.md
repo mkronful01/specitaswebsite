@@ -48,6 +48,26 @@ Regenerate after logo/content updates:
 node scratchedspace/generate-self-contained.mjs
 ```
 
+## Deploy (SiteGround)
+
+1. Build locally:
+
+```bash
+npm run build
+```
+
+2. Upload **everything inside** `dist/` (not the `dist` folder itself) to the SiteGround web root:
+   - Main domain: `public_html/`
+   - Or the folder mapped to `www.specitas.com`
+
+   Use **Site Tools → Site → File Manager**, or FTP/SFTP.
+
+3. Confirm `public_html/.htaccess` is present (copied from `public/.htaccess`) so React Router routes work.
+
+4. In SiteGround / GoDaddy DNS, point `www.specitas.com` (and optionally apex `specitas.com`) to your SiteGround site.
+
+5. Enable free SSL in SiteGround (**Site Tools → Security → SSL Manager**).
+
 ## Deploy (Netlify)
 
 1. Connect the repository to Netlify, or drag the `dist` folder after `npm run build`.

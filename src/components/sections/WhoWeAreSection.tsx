@@ -3,14 +3,19 @@ import styles from "./WhoWeAreSection.module.css";
 
 export function WhoWeAreSection() {
   const content = SiteContent.whoWeAre;
-  const bodyParagraphs = content.paragraphs.slice(1);
 
   return (
-    <section className="section" aria-label="Who we are details">
+    <section className="section" aria-labelledby="who-we-are-title">
       <div className="section__inner">
+        <header className={`${styles.header} reveal`}>
+          <p className="section__label">{content.label}</p>
+          <h2 className="section__title" id="who-we-are-title">
+            {content.title}
+          </h2>
+        </header>
         <div className={`${styles.layout} reveal`}>
           <div className={styles.copy}>
-            {bodyParagraphs.map((paragraph) => (
+            {content.paragraphs.map((paragraph) => (
               <p key={paragraph.slice(0, 24)} className="section__lead">
                 {paragraph}
               </p>

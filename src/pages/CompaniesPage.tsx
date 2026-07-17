@@ -1,15 +1,18 @@
-import { PageIntro } from "../components/layout/PageIntro";
 import { PageShell } from "../components/layout/PageShell";
 import { CompaniesSection } from "../components/sections/CompaniesSection";
+import { Logger } from "../logging/Logger";
+
+export class CompaniesPageController {
+  public static logMount(): void {
+    Logger.info("logMount", "Companies page mounted with redesigned layout");
+  }
+}
 
 export function CompaniesPage() {
+  CompaniesPageController.logMount();
+
   return (
     <PageShell>
-      <PageIntro
-        label="Our Group Companies"
-        title="Specialist brands under Specitas"
-        lead="C&B Consult delivers specification consultancy and technical support. Business & Beyond delivers business consultancy. Two specialist identities. One group."
-      />
       <CompaniesSection />
     </PageShell>
   );
