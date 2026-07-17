@@ -1,5 +1,6 @@
 import { useEffect } from "react";
-import { OfficeLocation, SiteContent } from "../../content/siteContent";
+import { SiteContent } from "../../content/siteContent";
+import type { OfficeLocation } from "../../content/siteContent";
 import { Logger } from "../../logging/Logger";
 import styles from "./OfficeLocations.module.css";
 
