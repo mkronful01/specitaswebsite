@@ -1,5 +1,10 @@
 .section {
   background: var(--color-mist);
+  color: var(--color-ink);
+}
+
+.section :global(.section__title) {
+  color: var(--color-ink);
 }
 
 .header {

@@ -18,6 +18,7 @@ export class CompaniesSectionController {
   public static logRender(): void {
     Logger.info("logRender", "Rendering group companies grid", {
       count: SiteContent.companies.length,
+      brands: SiteContent.companies.map((company) => company.brandName),
     });
   }
 }
@@ -29,42 +30,6 @@ type CompaniesSectionProps = {
 export function CompaniesSection({ showHeading = true }: CompaniesSectionProps) {
   CompaniesSectionController.logRender();
   const heading = SiteContent.companiesSection;
-
-  // #region agent log
-  fetch("http://127.0.0.1:7530/ingest/901f36b6-840a-4ea6-8756-170f80e9ee9c", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "X-Debug-Session-Id": "27faa4",
-    },
-    body: JSON.stringify({
-      sessionId: "27faa4",
-      runId: "pre-fix",
-      hypothesisId: "E",
-      location: "CompaniesSection.tsx:render",
-      message: "CompaniesSection render payload",
-      data: {
-        path: typeof window !== "undefined" ? window.location.href : "ssr",
-        scriptSrcs:
-          typeof document !== "undefined"
-            ? Array.from(
-                document.querySelectorAll('script[src*="index-"]'),
-              ).map((el) => (el as HTMLScriptElement).src)
-            : [],
-        companyCount: SiteContent.companies.length,
-        companies: SiteContent.companies.map((c) => ({
-          id: c.id,
-          brandName: c.brandName,
-          entities: c.entities ?? null,
-          hasHref: Boolean(c.href),
-        })),
-        headingTitle: heading.title,
-        buildMarker: "debug-27faa4-companies-v2",
-      },
-      timestamp: Date.now(),
-    }),
-  }).catch(() => {});
-  // #endregion
 
   return (
     <section className={`section ${styles.section}`} aria-label="Group companies">
@@ -148,3 +113,4 @@ export function CompaniesSection({ showHeading = true }: CompaniesSectionProps) 
     </section>
   );
 }
+

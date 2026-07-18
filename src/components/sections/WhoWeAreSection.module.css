@@ -1,6 +1,11 @@
 .layout {
   display: grid;
   gap: var(--space-xl);
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.header {
+  margin-bottom: var(--space-lg);
 }
 
 .header {
@@ -15,7 +20,7 @@
   display: grid;
   gap: 0.85rem;
   padding: var(--space-lg) 0 0;
-  border-top: 1px solid rgba(11, 13, 16, 0.08);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .benefit {
@@ -58,7 +63,7 @@
 
   .benefits {
     border-top: none;
-    border-left: 1px solid rgba(11, 13, 16, 0.08);
+    border-left: 1px solid rgba(255, 255, 255, 0.12);
     padding: 0 0 0 var(--space-xl);
   }
 }

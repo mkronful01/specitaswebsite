@@ -2,6 +2,15 @@
   background:
     linear-gradient(180deg, rgba(232, 238, 245, 0.65), rgba(245, 247, 250, 0.2)),
     var(--color-paper);
+  color: var(--color-ink);
+}
+
+.section :global(.section__title) {
+  color: var(--color-ink);
+}
+
+.section :global(.section__lead) {
+  color: rgba(28, 31, 36, 0.68);
 }
 
 .header {

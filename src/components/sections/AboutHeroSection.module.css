@@ -11,7 +11,7 @@
   inset: 0;
   background-image: var(--page-bg-image);
   background-size: cover;
-  background-position: center top;
+  background-position: center center;
   opacity: 0.95;
   pointer-events: none;
   z-index: 0;
@@ -38,7 +38,7 @@
   font-weight: 500;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: rgba(28, 31, 36, 0.55);
+  color: rgba(255, 255, 255, 0.55);
   margin-bottom: 1.1rem;
 }
 
@@ -51,7 +51,7 @@
 }
 
 .titlePrimary {
-  color: var(--color-ink);
+  color: var(--color-white);
 }
 
 .titleAccent {
@@ -59,7 +59,7 @@
 }
 
 .support {
-  color: rgba(28, 31, 36, 0.68);
+  color: rgba(255, 255, 255, 0.72);
   font-size: 1.02rem;
   max-width: 36ch;
   margin-bottom: 1.75rem;
@@ -73,7 +73,7 @@
   font-size: 0.92rem;
   font-weight: 550;
   letter-spacing: 0.02em;
-  color: var(--color-ink);
+  color: var(--color-white);
   transition: transform 0.2s var(--ease-out);
 }
 
@@ -139,7 +139,7 @@
 
 .valueText {
   font-size: 0.9rem;
-  color: rgba(28, 31, 36, 0.62);
+  color: rgba(255, 255, 255, 0.62);
   line-height: 1.45;
 }
 
@@ -155,9 +155,12 @@
   color: var(--color-gold);
 }
 
-.accentSlate,
+.accentSlate {
+  color: var(--color-slate-soft);
+}
+
 .accentCharcoal {
-  color: var(--color-charcoal);
+  color: rgba(255, 255, 255, 0.78);
 }
 
 @keyframes floatMark {
@@ -206,3 +209,4 @@
     max-width: none;
   }
 }
+

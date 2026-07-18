@@ -29,7 +29,7 @@
   font-size: clamp(1.15rem, 2vw, 1.45rem);
   line-height: 1.55;
   max-width: 34ch;
-  color: rgba(11, 13, 16, 0.88);
+  color: rgba(255, 255, 255, 0.88);
 }
 
 @media (min-width: 860px) {

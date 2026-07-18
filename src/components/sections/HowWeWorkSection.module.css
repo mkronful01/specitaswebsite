@@ -23,10 +23,11 @@
   font-size: clamp(1.9rem, 3.5vw, 2.85rem);
   margin-bottom: 1rem;
   max-width: 18ch;
+  color: var(--color-white);
 }
 
 .lead {
-  color: rgba(28, 31, 36, 0.68);
+  color: rgba(255, 255, 255, 0.72);
   font-size: 1.02rem;
   max-width: 52ch;
 }
@@ -293,3 +294,4 @@
     grid-template-columns: 1fr;
   }
 }
+

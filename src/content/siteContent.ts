@@ -110,7 +110,7 @@ export class SiteContent {
     "/assets/brand/specitas-hero-mark-clear.png";
 
   public static readonly pageBackgroundSrc =
-    "/assets/backgrounds/page-background.png";
+    "/assets/backgrounds/dark-bokeh-no-logo.png";
 
   public static readonly homeVideoSrc =
     "/assets/video/company-of-the-year-2026.mp4";
@@ -449,3 +449,4 @@ export class SiteContent {
       "Whether you require specialist specification consultancy, technical support, or business advisory services, Specitas Group brings together the expertise needed to help your projects succeed.",
   };
 }
+
