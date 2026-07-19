@@ -140,26 +140,7 @@
   width: 2.5rem;
   height: 2px;
   background: var(--color-teal);
-  margin-bottom: 1rem;
-}
-
-.closingLead {
-  color: rgba(28, 31, 36, 0.68);
-  margin-bottom: 1.35rem;
-  max-width: 40ch;
-}
-
-.actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-bottom: 1.35rem;
-}
-
-.tagline {
-  font-family: var(--font-display);
-  font-size: 0.82rem;
-  letter-spacing: 0.02em;
+  margin-bottom: 1.25rem;
 }
 
 .channels {
@@ -218,15 +199,6 @@ a.channel:hover {
   color: var(--color-charcoal);
 }
 
-.officesWrap {
-  margin-bottom: 2rem;
-  padding: clamp(1.35rem, 2.5vw, 1.85rem);
-  background: rgba(255, 255, 255, 0.72);
-  border: 1px solid rgba(28, 31, 36, 0.08);
-  border-radius: 18px;
-  box-shadow: var(--shadow-soft);
-}
-
 @keyframes floatMark {
   0%,
   100% {
@@ -268,14 +240,6 @@ a.channel:hover {
 @media (max-width: 560px) {
   .channels {
     grid-template-columns: 1fr;
-  }
-
-  .actions {
-    flex-direction: column;
-  }
-
-  .actions .btn {
-    width: 100%;
   }
 }
 

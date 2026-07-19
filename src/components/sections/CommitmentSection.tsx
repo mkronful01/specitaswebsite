@@ -105,39 +105,10 @@ export function CommitmentSection() {
             </div>
 
             <div className={styles.closing}>
-              <h3 className={styles.closingTitle}>{content.closingTitle}</h3>
+              <h3 className={styles.closingTitle}>Our Offices</h3>
               <span className={styles.closingRule} aria-hidden="true" />
-              <p className={styles.closingLead}>{content.closingLead}</p>
-              <div className={styles.actions}>
-                <a
-                  className="btn btn--primary"
-                  href={`mailto:${SiteContent.contactEmail}`}
-                  onClick={() =>
-                    CommitmentSectionController.handleContactClick("primary")
-                  }
-                >
-                  Get in Touch
-                </a>
-                <a
-                  className="btn btn--ghost"
-                  href={`mailto:${SiteContent.contactEmail}?subject=Specitas%20Group%20Enquiry`}
-                  onClick={() =>
-                    CommitmentSectionController.handleContactClick("email")
-                  }
-                >
-                  Email Specitas Group
-                </a>
-              </div>
-              <p className={styles.tagline}>
-                <span className="text-accent-teal">Specialized Expertise.</span>{" "}
-                <span className="text-accent-plum">Integrated Solutions.</span>{" "}
-                <span className="text-accent-gold">Better Outcomes.</span>
-              </p>
+              <OfficeLocations layout="stack" />
             </div>
-          </div>
-
-          <div className={`${styles.officesWrap} reveal`}>
-            <OfficeLocations />
           </div>
 
           <ul className={`${styles.channels} reveal`}>

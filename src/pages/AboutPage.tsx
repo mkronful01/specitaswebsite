@@ -1,6 +1,5 @@
 import { PageShell } from "../components/layout/PageShell";
 import { AboutHeroSection } from "../components/sections/AboutHeroSection";
-import { CompaniesSection } from "../components/sections/CompaniesSection";
 import { PresenceSection } from "../components/sections/PresenceSection";
 import { VisionMissionSection } from "../components/sections/VisionMissionSection";
 import { WhoWeAreSection } from "../components/sections/WhoWeAreSection";
@@ -19,7 +18,6 @@ export function AboutPage() {
   return (
     <PageShell>
       <AboutHeroSection />
-      <CompaniesSection />
       <WhoWeAreSection />
       <VisionMissionSection />
       <WhySection />

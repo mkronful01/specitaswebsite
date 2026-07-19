@@ -63,26 +63,11 @@ export function CompaniesSection({ showHeading = true }: CompaniesSectionProps) 
               </div>
 
               <div className={styles.copy}>
-                {company.entities && company.entities.length > 0 ? (
-                  <ul className={styles.entities}>
-                    {company.entities.map((entity) => (
-                      <li key={`${entity.name}-${entity.region}`}>
-                        <h3 className={styles.name}>
-                          {entity.name}{" "}
-                          <span className={styles.entityRegion}>
-                            ({entity.region})
-                          </span>
-                        </h3>
-                      </li>
-                    ))}
-                  </ul>
-                ) : (
-                  <h3 className={styles.name}>{company.brandName}</h3>
-                )}
+                <h3 className={styles.name}>
+                  {company.brandName}{" "}
+                  <span className={styles.entityRegion}>({company.region})</span>
+                </h3>
                 <p className={styles.focus}>{company.focus}</p>
-                {!company.entities ? (
-                  <p className={styles.region}>{company.region}</p>
-                ) : null}
                 <p className={styles.description}>{company.description}</p>
                 {company.href ? (
                   <a

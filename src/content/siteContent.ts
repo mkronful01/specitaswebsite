@@ -120,8 +120,41 @@ export class SiteContent {
     { path: "/about", label: "About us" },
     { path: "/companies", label: "Companies" },
     { path: "/how-we-work", label: "How We Work" },
+    { path: "/careers", label: "Careers" },
     { path: "/contact", label: "Contact" },
   ];
+
+  public static readonly careersPortalUrl = "https://career.specitas.com";
+
+  public static readonly careers = {
+    label: "Careers",
+    titleBefore: "Build your next chapter ",
+    titleAccent: "with Specitas.",
+    lead:
+      "Join a consortium of specialist companies delivering technical consultancy and business advisory across the Middle East. Explore open roles and opportunities on our careers portal.",
+    ctaLabel: "Visit career.specitas.com",
+    portalDisplay: "career.specitas.com",
+    points: [
+      {
+        id: "specialist",
+        title: "Specialist expertise",
+        description:
+          "Work within focused member companies while collaborating across the Specitas Group network.",
+      },
+      {
+        id: "regional",
+        title: "Regional impact",
+        description:
+          "Contribute to projects across the UAE, Lebanon, and the wider MENA region.",
+      },
+      {
+        id: "growth",
+        title: "Professional growth",
+        description:
+          "Grow through technically sound work, trusted partnerships, and high professional standards.",
+      },
+    ],
+  };
 
   public static readonly hero = {
     headline: "Building Better Projects Through Specialized Expertise",
@@ -235,29 +268,34 @@ export class SiteContent {
 
   public static readonly companiesSection = {
     label: "Our Group Companies",
-    title: "Two Companies. One Consortium. Shared Excellence.",
+    title: "Three Companies. One Consortium. Shared Excellence.",
   };
 
   public static readonly companies: CompanyProfile[] = [
     {
-      id: "cb-group",
+      id: "cb-consultant",
       brandName: "C&B Consultant",
-      legalNames: [
-        "C&B Consultant LLC OPC",
-        "Construction & Builders S.A.R.L.",
-      ],
-      entities: [
-        { name: "C&B Consultant", region: "UAE" },
-        { name: "Construction & Builders", region: "Lebanon" },
-      ],
+      legalNames: ["C&B Consultant LLC OPC"],
       focus: "Specification Consultancy & Technical Support",
-      region: "UAE · Lebanon",
+      region: "UAE",
       description:
-        "Architectural, interior, landscape, and engineering specification consultancy, specification management, compliance reviews, material advisory, technical documentation, and lead technical support for complex construction projects.",
+        "Architectural, interior, landscape, and engineering specification consultancy, specification management, compliance reviews, material advisory, and technical documentation for complex construction projects.",
       logoSrc: "/assets/brand/cb-consult-official.png",
       accent: "teal",
       logoTone: "light",
       href: "https://www.candbconsult.com",
+    },
+    {
+      id: "construction-builders",
+      brandName: "Construction & Builders",
+      legalNames: ["Construction & Builders S.A.R.L."],
+      focus: "Specification Consultancy & Lead Technical Support",
+      region: "Lebanon",
+      description:
+        "Technical specification consultancy and lead technical support for construction projects across Lebanon, aligned with Specitas Group quality standards.",
+      logoSrc: "/assets/brand/construction-builders-official.png?v=3",
+      accent: "gold",
+      logoTone: "light",
     },
     {
       id: "business-beyond",

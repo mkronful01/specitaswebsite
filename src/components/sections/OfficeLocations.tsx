@@ -5,11 +5,14 @@ import { Logger } from "../../logging/Logger";
 import styles from "./OfficeLocations.module.css";
 
 export class OfficeLocationsController {
-  public static logMount(officeCount: number): void {
+  public static logMount(officeCount: number, layout: string): void {
     Logger.info(
       "logMount",
       `Mounted office locations with ${officeCount} office(s)`,
-      { officeIds: SiteContent.offices.map((office) => office.id) },
+      {
+        layout,
+        officeIds: SiteContent.offices.map((office) => office.id),
+      },
     );
   }
 
@@ -22,15 +25,22 @@ export class OfficeLocationsController {
   }
 }
 
-export function OfficeLocations() {
+type OfficeLocationsProps = {
+  layout?: "grid" | "stack";
+};
+
+export function OfficeLocations({ layout = "grid" }: OfficeLocationsProps) {
   const offices = SiteContent.offices;
 
   useEffect(() => {
-    OfficeLocationsController.logMount(offices.length);
-  }, [offices.length]);
+    OfficeLocationsController.logMount(offices.length, layout);
+  }, [offices.length, layout]);
 
   return (
-    <div className={styles.offices} aria-label="Office locations">
+    <div
+      className={`${styles.offices} ${layout === "stack" ? styles.stack : ""}`}
+      aria-label="Office locations"
+    >
       {offices.map((office) => (
         <article key={office.id} className={styles.office}>
           <h4 className={styles.name}>{office.name}</h4>

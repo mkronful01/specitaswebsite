@@ -1,0 +1,82 @@
+.section {
+  padding-top: 1.5rem;
+}
+
+.panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: start;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(28, 31, 36, 0.08);
+  border-radius: 18px;
+  box-shadow: var(--shadow-soft);
+}
+
+.copy {
+  max-width: 38rem;
+}
+
+.title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  max-width: 14ch;
+  margin-bottom: 1rem;
+}
+
+.lead {
+  color: rgba(28, 31, 36, 0.68);
+  font-size: 1.05rem;
+  max-width: 48ch;
+  margin-bottom: 1.5rem;
+}
+
+.portalHint {
+  margin-top: 1rem;
+  color: rgba(28, 31, 36, 0.55);
+  font-size: 0.92rem;
+}
+
+.portalLink {
+  color: var(--color-teal-deep);
+  font-family: var(--font-display);
+  letter-spacing: 0.02em;
+  transition: color 0.25s var(--ease-out);
+}
+
+.portalLink:hover {
+  color: var(--color-teal);
+}
+
+.points {
+  display: grid;
+  gap: 1.15rem;
+}
+
+.point {
+  padding-top: 0.85rem;
+  border-top: 1px solid rgba(28, 31, 36, 0.08);
+}
+
+.point:first-child {
+  padding-top: 0;
+  border-top: none;
+}
+
+.pointTitle {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  margin-bottom: 0.35rem;
+}
+
+.pointText {
+  color: rgba(28, 31, 36, 0.68);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .panel {
+    grid-template-columns: 1fr;
+  }
+}

@@ -79,13 +79,13 @@ ul {
 }
 
 .section {
-  padding: var(--space-2xl) var(--space-lg);
+  padding-block: var(--space-xl);
+  padding-inline: var(--space-lg);
   position: relative;
 }
 
 .section--tight {
-  padding-top: var(--space-xl);
-  padding-bottom: var(--space-xl);
+  padding-block: var(--space-lg);
 }
 
 .section__inner {
@@ -204,8 +204,12 @@ ul {
 
 @media (max-width: 720px) {
   .section {
-    padding-left: 1.15rem;
-    padding-right: 1.15rem;
+    padding-block: var(--space-lg);
+    padding-inline: 1.15rem;
+  }
+
+  .section--tight {
+    padding-block: var(--space-md);
   }
 
   body {

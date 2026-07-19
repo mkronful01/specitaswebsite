@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { Logger } from "./logging/Logger";
 import { AboutPage } from "./pages/AboutPage";
+import { CareersPage } from "./pages/CareersPage";
 import { CompaniesPage } from "./pages/CompaniesPage";
 import { ContactPage } from "./pages/ContactPage";
 import { HomePage } from "./pages/HomePage";
@@ -25,6 +26,8 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/companies" element={<CompaniesPage />} />
         <Route path="/how-we-work" element={<HowWeWorkPage />} />
+        <Route path="/careers" element={<CareersPage />} />
+        <Route path="/career" element={<Navigate to="/careers" replace />} />
         <Route path="/presence" element={<Navigate to="/about" replace />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/share" element={<Navigate to="/" replace />} />
