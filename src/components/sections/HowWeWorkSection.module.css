@@ -23,11 +23,11 @@
   font-size: clamp(1.9rem, 3.5vw, 2.85rem);
   margin-bottom: 1rem;
   max-width: 18ch;
-  color: var(--color-white);
+  color: var(--color-ink);
 }
 
 .lead {
-  color: rgba(255, 255, 255, 0.72);
+  color: var(--color-slate);
   font-size: 1.02rem;
   max-width: 52ch;
 }

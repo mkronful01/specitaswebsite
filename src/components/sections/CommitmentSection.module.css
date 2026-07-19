@@ -19,11 +19,11 @@
   font-size: clamp(2.1rem, 4vw, 3.2rem);
   margin-bottom: 1rem;
   max-width: 12ch;
-  color: var(--color-white);
+  color: var(--color-ink);
 }
 
 .heroLead {
-  color: rgba(255, 255, 255, 0.72);
+  color: var(--color-slate);
   font-size: 1.02rem;
   max-width: 42ch;
 }

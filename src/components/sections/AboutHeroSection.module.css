@@ -1,7 +1,6 @@
 .hero {
   position: relative;
-  min-height: calc(100vh - var(--header-height));
-  padding: clamp(2rem, 5vw, 4.5rem) var(--space-lg) var(--space-xl);
+  padding: clamp(1.5rem, 4vw, 3rem) var(--space-lg) clamp(1rem, 2vw, 1.5rem);
   overflow: hidden;
 }
 
@@ -38,7 +37,7 @@
   font-weight: 500;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.55);
+  color: var(--color-slate);
   margin-bottom: 1.1rem;
 }
 
@@ -51,7 +50,7 @@
 }
 
 .titlePrimary {
-  color: var(--color-white);
+  color: var(--color-ink);
 }
 
 .titleAccent {
@@ -59,7 +58,7 @@
 }
 
 .support {
-  color: rgba(255, 255, 255, 0.72);
+  color: var(--color-slate);
   font-size: 1.02rem;
   max-width: 36ch;
   margin-bottom: 1.75rem;
@@ -73,7 +72,7 @@
   font-size: 0.92rem;
   font-weight: 550;
   letter-spacing: 0.02em;
-  color: var(--color-white);
+  color: var(--color-ink);
   transition: transform 0.2s var(--ease-out);
 }
 
@@ -139,7 +138,7 @@
 
 .valueText {
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.62);
+  color: var(--color-slate);
   line-height: 1.45;
 }
 
@@ -160,7 +159,7 @@
 }
 
 .accentCharcoal {
-  color: rgba(255, 255, 255, 0.78);
+  color: var(--color-charcoal);
 }
 
 @keyframes floatMark {
@@ -197,8 +196,8 @@
 
 @media (max-width: 640px) {
   .hero {
-    min-height: auto;
-    padding-top: 1.5rem;
+    padding-top: 1.25rem;
+    padding-bottom: 0.75rem;
   }
 
   .values {

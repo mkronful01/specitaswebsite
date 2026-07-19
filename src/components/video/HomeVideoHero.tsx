@@ -84,20 +84,6 @@ export function HomeVideoHero() {
       </div>
 
       <div className={styles.content}>
-        <div className={styles.brandBlock}>
-          <img
-            className={styles.logoMark}
-            src={SiteContent.logoMarkSrc}
-            alt=""
-            width={88}
-            height={88}
-          />
-          <div>
-            <div className={styles.wordmarkPrimary}>Specitas</div>
-            <div className={styles.wordmarkSecondary}>Group</div>
-          </div>
-        </div>
-
         <h1 className={styles.headline}>{hero.headline}</h1>
         <p className={styles.support}>{hero.support}</p>
 

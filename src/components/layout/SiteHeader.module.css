@@ -23,27 +23,27 @@
   right: 0;
   background: transparent;
   backdrop-filter: none;
-  color: var(--color-white);
+  color: var(--color-ink);
 }
 
 .headerTransparent .brandName {
-  color: var(--color-white);
+  color: var(--color-ink);
 }
 
 .headerTransparent .brandGroup {
-  color: var(--color-slate-soft);
+  color: var(--color-slate);
 }
 
 .headerTransparent .navLink {
-  color: rgba(255, 255, 255, 0.72);
+  color: var(--color-slate);
 }
 
 .headerTransparent .navLink:hover {
-  color: var(--color-white);
+  color: var(--color-ink);
 }
 
 .headerTransparent .navLinkActive {
-  color: var(--color-white);
+  color: var(--color-ink);
   font-weight: 600;
 }
 

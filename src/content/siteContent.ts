@@ -110,7 +110,7 @@ export class SiteContent {
     "/assets/brand/specitas-hero-mark-clear.png";
 
   public static readonly pageBackgroundSrc =
-    "/assets/backgrounds/dark-bokeh-no-logo.png";
+    "/assets/backgrounds/specitas-web-bg.png";
 
   public static readonly homeVideoSrc =
     "/assets/video/company-of-the-year-2026.mp4";
